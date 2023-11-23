@@ -34,12 +34,12 @@ const AcademicPages: FunctionComponent<{
         <h2>{subtitle}</h2>
         <div>
           {tools.map((Tool) => (
-            <Tool />
+            <Tool key={Tool.displayName} />
           ))}
         </div>
         <Carousel images={images} />
         {description.map((text) => (
-          <p>{text}</p>
+          <p key={text}>{text}</p>
         ))}
       </article>
       <DoorHeader position="bottom" direction="down" />

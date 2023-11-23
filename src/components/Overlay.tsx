@@ -34,3 +34,5 @@ export const Overlay: ForwardRefExoticComponent<
     </form>
   </dialog>
 ));
+
+Overlay.displayName = "Overlay";
