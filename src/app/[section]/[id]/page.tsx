@@ -38,7 +38,7 @@ const AcademicPages: FunctionComponent<{
       <DoorHeader position="bottom" direction="down" />
       <CardsContainer>
         {Object.entries(restOfContents).map(([id, content]) => (
-          <Card key={id} href={`${section}/${id}`} {...content} />
+          <Card key={id} href={`/${section}/${id}`} {...content} />
         ))}
       </CardsContainer>
     </main>
