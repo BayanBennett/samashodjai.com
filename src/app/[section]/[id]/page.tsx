@@ -1,21 +1,14 @@
 import type { FunctionComponent } from "react";
-import type { Content } from "@/shared-types";
 import * as data from "@/data";
 import { DoorHeader } from "@/components/Door";
 import { H1 } from "@/components/typography/Headings";
-import {
-  Carousel,
-  CarouselContainer,
-  CarouselItem,
-} from "@/components/Carousel";
+import { Carousel } from "@/components/Carousel";
 import Link from "next/link";
-import Image from "next/image";
-import { Overlay } from "@/components/Overlay";
 import { Card, CardsContainer } from "@/components/Card";
 
 export const generateStaticParams = async () =>
   Object.entries(data).flatMap(([section, value]) =>
-    Object.keys(value).map((id) => ({ section, id })),
+    Object.keys(value.contents).map((id) => ({ section, id })),
   );
 
 const AcademicPages: FunctionComponent<{
