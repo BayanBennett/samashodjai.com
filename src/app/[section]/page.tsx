@@ -13,7 +13,7 @@ const SectionPages: FunctionComponent<{
       <DoorHeader position="bottom" direction="up" title={title} />
       <CardsContainer>
         {Object.entries(contents).map(([id, content]) => (
-          <Card key={id} href={`${section}/${id}`} {...content} />
+          <Card key={id} href={`/${section}/${id}`} {...content} />
         ))}
       </CardsContainer>
     </main>
