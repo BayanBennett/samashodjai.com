@@ -3,16 +3,16 @@ import { Door } from "@/components/Door";
 import { H1 } from "@/components/typography/Headings";
 
 const Page = () => (
-  <main className="flex flex-col pt-16 justify-center items-center">
-    <section className="flex flex-col border-4 relative pt-[3vw] pb-[9vw] px-[3vw]">
+  <main className="flex flex-col pt-16 place-items-center">
+    <section className="flex flex-col border-4 relative pt-[3vw] pb-[9vw] px-[4vw]">
       <Door direction="up" position="top" />
       <Link href="/about">
-        <h1 className="text-[4vw] px-[3vw]">About</h1>
+        <h1 className="text-[4vw] px-[4vw]">About</h1>
       </Link>
       <div className="h-8" />
-      <section className="px-[3vw] flex flex-row relative items-center">
-        <aside className="-rotate-90 absolute left-[-6vw] pointer-events-none">
-          <h2 className="text-[2.5vw]">Portfolio</h2>
+      <section className="px-[4vw] flex flex-row relative place-items-center">
+        <aside className="-rotate-90 absolute left-[-7vw] pointer-events-none">
+          <h2 className="text-[2.8vw] font-light">Portfolio</h2>
         </aside>
         <div className="flex flex-col">
           <Link href="/academic">
