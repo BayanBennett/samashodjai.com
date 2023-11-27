@@ -64,12 +64,17 @@ export default function RootLayout({
             </div>
           </div>
           <div className="navbar-end">
-            <button className="btn btn-ghost btn-circle">
-              <InstagramIcon />
-            </button>
-            <button className="btn btn-ghost btn-circle">
-              <LinkedInIcon />
-            </button>
+            <a href="https://www.instagram.com/sama.shodjai" target="_blank">
+              <button className="btn btn-ghost btn-circle">
+                <InstagramIcon />
+              </button>
+            </a>
+
+            <a href="https://ca.linkedin.com/in/SamaShodjai" target="_blank">
+              <button className="btn btn-ghost btn-circle">
+                <LinkedInIcon />
+              </button>
+            </a>
           </div>
         </header>
         {children}
