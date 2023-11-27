@@ -9,14 +9,14 @@ const SectionPages: FunctionComponent<{
 }> = ({ params: { section } }) => {
   const { title, contents } = data[section];
   return (
-    <main className="container p-2">
+    <>
       <DoorHeader position="bottom" direction="up" title={title} />
       <CardsContainer>
         {Object.entries(contents).map(([id, content]) => (
           <Card key={id} href={`/${section}/${id}`} {...content} />
         ))}
       </CardsContainer>
-    </main>
+    </>
   );
 };
 

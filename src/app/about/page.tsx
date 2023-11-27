@@ -4,7 +4,7 @@ import { H1 } from "@/components/typography/Headings";
 import Image from "next/image";
 import SrcSamaShodjaiSquare from "../../../public/Sama-Shodjai-square.jpg";
 const About = () => (
-  <main className="container">
+  <>
     <h2 className="border-b-4 relative pt-16 pl-6">
       <Door position="bottom" direction="up" />
       About
@@ -67,7 +67,7 @@ const About = () => (
         src="/Sama%20Shodjai%20Resume.pdf"
       ></iframe>
     </section>
-  </main>
+  </>
 );
 
 export default About;

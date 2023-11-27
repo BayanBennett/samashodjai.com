@@ -10,10 +10,12 @@ export const Card: FunctionComponent<Content & { href: string }> = ({
   images,
 }) => (
   <Link className="cursor-pointer" href={href}>
-    <div className="card">
+    <div className="card card-compact rounded-none">
       <figure className="p-3">
         <Image
-          className="w-full aspect-square object-cover border transition-filter duration-100 filter grayscale hover:grayscale-0"
+          width={700}
+          height={700}
+          className="w-full aspect-square object-cover scale-150 transition-filter duration-100 filter grayscale hover:grayscale-0"
           src={images[0]}
           alt={title}
           placeholder="blur"
@@ -30,7 +32,7 @@ export const Card: FunctionComponent<Content & { href: string }> = ({
 export const CardsContainer: FunctionComponent<PropsWithChildren> = ({
   children,
 }) => (
-  <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 p-3">
+  <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 p-6">
     {children}
   </section>
 );

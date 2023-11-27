@@ -18,21 +18,28 @@ const AcademicPages: FunctionComponent<{
   const { title, subtitle, description, tools, images } = thisContents;
 
   return (
-    <main className="container relative p-2">
+    <main className="relative">
       <Link href={`/${section}`}>
         <DoorHeader position="bottom" direction="up" title={section} />
       </Link>
-      <article className="p-2">
-        <H1>{title}</H1>
-        <h2>{subtitle}</h2>
-        <div>
-          {tools.map((Tool) => (
-            <Tool key={Tool.displayName} />
-          ))}
+      <article className="p-3">
+        <div className="flex flex-col md:flex-row">
+          <H1 className="flex-1">
+            {title}
+            <br />
+            <small>{subtitle}</small>
+          </H1>
+          <div className="p-3 flex-none">
+            {tools.map((Tool) => (
+              <Tool key={Tool.displayName} />
+            ))}
+          </div>
         </div>
         <Carousel images={images} />
         {description.map((text) => (
-          <p key={text}>{text}</p>
+          <p className="prose max-w-none p-3" key={text}>
+            {text}
+          </p>
         ))}
       </article>
       <DoorHeader position="bottom" direction="down" />

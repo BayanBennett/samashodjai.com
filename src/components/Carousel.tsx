@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  forwardRef,
   FunctionComponent,
   MouseEventHandler,
   PropsWithChildren,
@@ -16,23 +17,13 @@ import Link from "next/link";
 
 export const CarouselContainer: FunctionComponent<PropsWithChildren> = ({
   children,
-}) => {
-  const [] = useState(0);
-
-  return (
-    <div className="relative">
-      {/*<aside className="absolute top-0 bottom-0 left-0 flex flex-col justify-center">*/}
-      {/*  <button className="text-4xl">〈</button>*/}
-      {/*</aside>*/}
-      <div className="carousel carousel-center p-4 space-x-4 rounded-box">
-        {children}
-      </div>
-      {/*<aside className="absolute top-0 bottom-0 right-0 flex flex-col justify-center">*/}
-      {/*  <button className="text-4xl">〉</button>*/}
-      {/*</aside>*/}
+}) => (
+  <div className="p-3">
+    <div className="carousel carousel-center space-x-4 aspect-video shadow rounded">
+      {children}
     </div>
-  );
-};
+  </div>
+);
 
 export const CarouselItem: FunctionComponent<
   PropsWithChildren<{ id?: string }>
@@ -49,6 +40,7 @@ export const Carousel: FunctionComponent<{ images: StaticImageData[] }> = ({
     null,
   );
   const overlayRef = useRef<HTMLDialogElement | null>(null);
+  const scrollRef = useRef<HTMLElement | null>(null);
   const createOpenModal = (src: StaticImageData) => () => {
     setCurrentImage(src);
     console.log(src);
@@ -63,7 +55,7 @@ export const Carousel: FunctionComponent<{ images: StaticImageData[] }> = ({
           <CarouselItem id={`image-${index}`} key={src.src}>
             <Image
               onClick={createOpenModal(src)}
-              className="object-contain mx-auto aspect-video"
+              className="object-contain mx-auto"
               placeholder="blur"
               src={src}
               alt={""}
@@ -71,19 +63,25 @@ export const Carousel: FunctionComponent<{ images: StaticImageData[] }> = ({
           </CarouselItem>
         ))}
       </CarouselContainer>
-      <div className="flex flex-row flex-wrap justify-center w-full p-1 gap-1">
+      <div className="flex flex-row flex-wrap justify-center w-full p-3 gap-1">
         {images.map((src, index) => (
-          <Link href={`#image-${index}`} key={src.src} scroll={false}>
-            <button className="btn btn-circle btn-xs overflow-hidden">
-              <Image
-                className="object-cover"
-                src={src}
-                width={24}
-                height={24}
-                alt={""}
-              />
-            </button>
-          </Link>
+          <button
+            key={src.src}
+            className="btn btn-circle btn-sm overflow-hidden"
+            onClick={() => {
+              document
+                .getElementById(`image-${index}`)
+                ?.scrollIntoView({ block: "nearest", inline: "nearest" });
+            }}
+          >
+            <Image
+              className="object-cover w-8 h-8"
+              src={src}
+              width={24}
+              height={24}
+              alt={""}
+            />
+          </button>
         ))}
       </div>
     </>
