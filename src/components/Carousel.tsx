@@ -19,7 +19,7 @@ export const CarouselContainer: FunctionComponent<PropsWithChildren> = ({
   children,
 }) => (
   <div className="p-3">
-    <div className="carousel carousel-center space-x-4 aspect-video shadow rounded">
+    <div className="carousel carousel-center space-x-4 aspect-video shadow rounded w-full">
       {children}
     </div>
   </div>
