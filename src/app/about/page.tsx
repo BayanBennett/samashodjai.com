@@ -12,13 +12,17 @@ const About = () => (
     <section className="p-3">
       <H1 className="p-3">Sama Shodjai</H1>
       <div className="flex flex-col md:flex-row-reverse justify-stretch items-stretch">
-        <figure className="flex-1 p-3">
-          <Image
-            src={SrcSamaShodjaiSquare}
-            alt="Sama Shodjai"
-            placeholder="blur"
-          />
-        </figure>
+        <div className="flex-1 p-3">
+          <figure className="relative aspect-square">
+            <Image
+              className="object-contain"
+              fill={true}
+              src={SrcSamaShodjaiSquare}
+              alt="Sama Shodjai"
+              placeholder="blur"
+            />
+          </figure>
+        </div>
         <div className="flex-1 prose p-3">
           <p>Hello!</p>
           <p>
