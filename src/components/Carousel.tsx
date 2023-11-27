@@ -57,6 +57,7 @@ export const Carousel: FunctionComponent<{ images: StaticImageData[] }> = ({
         {images.map((src, index) => (
           <CarouselItem id={`image-${index}`} key={src.src}>
             <Image
+              loading="eager"
               fill={true}
               onClick={createOpenModal(src)}
               className="object-contain mx-auto"
