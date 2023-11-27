@@ -28,7 +28,10 @@ export const CarouselContainer: FunctionComponent<PropsWithChildren> = ({
 export const CarouselItem: FunctionComponent<
   PropsWithChildren<{ id?: string }>
 > = ({ children, id }) => (
-  <div id={id} className="carousel-item w-full">
+  <div
+    id={id}
+    className="flex relative carousel-item w-full place-items-center"
+  >
     {children}
   </div>
 );
@@ -54,6 +57,7 @@ export const Carousel: FunctionComponent<{ images: StaticImageData[] }> = ({
         {images.map((src, index) => (
           <CarouselItem id={`image-${index}`} key={src.src}>
             <Image
+              fill={true}
               onClick={createOpenModal(src)}
               className="object-contain mx-auto"
               placeholder="blur"
