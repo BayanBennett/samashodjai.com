@@ -3,6 +3,27 @@ import * as data from "@/data";
 
 import { Card, CardsContainer } from "@/components/Card";
 import { FunctionComponent } from "react";
+import { Metadata, ResolvingMetadata } from "next";
+
+type Props = {
+  params: { section: keyof typeof data };
+};
+
+export const generateMetadata = async (
+  { params }: Props,
+  parentPromise: ResolvingMetadata,
+): Promise<Metadata> => {
+  const { section } = params;
+
+  const { title } = data[section];
+  const parent = await parentPromise;
+  return {
+    title: {
+      default: title,
+      template: `%s | ${title}`,
+    },
+  };
+};
 
 const SectionPages: FunctionComponent<{
   params: { section: keyof typeof data };
