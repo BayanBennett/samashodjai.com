@@ -15,6 +15,7 @@ const AcademicPages: FunctionComponent<{
   params: { id: string; section: keyof typeof data };
 }> = ({ params: { id, section } }) => {
   const { [id]: thisContents, ...restOfContents } = data[section].contents;
+  const restOfContentsEntries = Object.entries(restOfContents);
   const { title, subtitle, description, tools, images } = thisContents;
 
   return (
@@ -24,11 +25,10 @@ const AcademicPages: FunctionComponent<{
       </Link>
       <article className="p-3">
         <div className="flex flex-col md:flex-row">
-          <H1 className="flex-1">
-            {title}
-            <br />
-            <small>{subtitle}</small>
-          </H1>
+          <div className="flex-1">
+            <H1>{title}</H1>
+            <p className="px-3">{subtitle}</p>
+          </div>
           <div className="p-3 flex-none">
             {tools.map((Tool) => (
               <Tool key={Tool.displayName} />
@@ -42,12 +42,20 @@ const AcademicPages: FunctionComponent<{
           </p>
         ))}
       </article>
-      <DoorHeader position="bottom" direction="down" />
-      <CardsContainer>
-        {Object.entries(restOfContents).map(([id, content]) => (
-          <Card key={id} href={`/${section}/${id}`} {...content} />
-        ))}
-      </CardsContainer>
+      {restOfContentsEntries.length > 0 ? (
+        <>
+          <DoorHeader
+            position="bottom"
+            direction="down"
+            title={`${section} Continued`}
+          />
+          <CardsContainer>
+            {restOfContentsEntries.map(([id, content]) => (
+              <Card key={id} href={`/${section}/${id}`} {...content} />
+            ))}
+          </CardsContainer>
+        </>
+      ) : null}
     </main>
   );
 };
