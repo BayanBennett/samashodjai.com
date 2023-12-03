@@ -5,15 +5,32 @@ import { H1 } from "@/components/typography/Headings";
 import { Carousel } from "@/components/Carousel";
 import Link from "next/link";
 import { Card, CardsContainer } from "@/components/Card";
+import { Metadata, ResolvingMetadata } from "next";
+
+type Props = {
+  params: { id: string; section: keyof typeof data };
+};
+
+export const generateMetadata = async (
+  { params }: Props,
+  parentPromise: ResolvingMetadata,
+): Promise<Metadata> => {
+  const { section, id } = params;
+  const { title, images, subtitle } = data[section].contents[id];
+  return {
+    title,
+    description: subtitle,
+  };
+};
 
 export const generateStaticParams = async () =>
   Object.entries(data).flatMap(([section, value]) =>
     Object.keys(value.contents).map((id) => ({ section, id })),
   );
 
-const AcademicPages: FunctionComponent<{
-  params: { id: string; section: keyof typeof data };
-}> = ({ params: { id, section } }) => {
+const AcademicPages: FunctionComponent<Props> = ({
+  params: { id, section },
+}) => {
   const { [id]: thisContents, ...restOfContents } = data[section].contents;
   const restOfContentsEntries = Object.entries(restOfContents);
   const { title, subtitle, description, tools, images } = thisContents;
