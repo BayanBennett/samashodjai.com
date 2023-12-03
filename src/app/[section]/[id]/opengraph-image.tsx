@@ -7,8 +7,6 @@ export const size = {
   height: 630,
 };
 
-//export const contentType = "image/jpeg";
-
 type Props = {
   params: { id: string; section: keyof typeof data };
 };
@@ -18,7 +16,21 @@ const OpenGraphImage = async ({ params }: Props): Promise<ImageResponse> => {
   const { images } = data[section].contents[id];
 
   return new ImageResponse(
-    <Image width={size.width} height={size.height} src={images[0]} alt="" />,
+    (
+      <div
+        style={{
+          fontSize: 128,
+          background: "white",
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Image width={size.width} height={size.height} src={images[0]} alt="" />
+      </div>
+    ),
     {
       ...size,
     },
