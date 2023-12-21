@@ -33,7 +33,8 @@ const AcademicPages: FunctionComponent<Props> = ({
 }) => {
   const { [id]: thisContents, ...restOfContents } = data[section].contents;
   const restOfContentsEntries = Object.entries(restOfContents);
-  const { title, subtitle, description, tools, images } = thisContents;
+  const { title, subtitle, description, year, collaborators, tools, images } =
+    thisContents;
 
   return (
     <main className="relative">
@@ -45,6 +46,12 @@ const AcademicPages: FunctionComponent<Props> = ({
           <div className="flex-1">
             <H1>{title}</H1>
             <p className="px-3">{subtitle}</p>
+            <p className="px-3">{year}</p>
+            {Array.isArray(collaborators) ? (
+              <p className="px-3 pt-3">
+                Collaborators: {collaborators.join(", ")}
+              </p>
+            ) : null}
           </div>
           <div className="p-3 flex-none">
             {tools.map((Tool) => (

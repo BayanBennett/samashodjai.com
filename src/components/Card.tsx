@@ -15,7 +15,7 @@ export const Card: FunctionComponent<Content & { href: string }> = ({
         <Image
           width={700}
           height={700}
-          className="w-full aspect-square object-cover scale-150 transition-filter duration-100 filter grayscale hover:grayscale-0"
+          className="w-full aspect-square object-cover scale-{200} transition-filter duration-100 filter grayscale hover:grayscale-0"
           src={images[0]}
           alt={title}
           placeholder="blur"
