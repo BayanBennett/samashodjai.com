@@ -89,9 +89,11 @@ export const Carousel: FunctionComponent<{ images: Content["images"] }> = ({
                   alt={""}
                 />
               </picture>
-              <figcaption className="text-center">
-                <small>{caption}</small>
-              </figcaption>
+              {caption.length > 0 ? (
+                <figcaption className="text-center">
+                  <small>{caption}</small>
+                </figcaption>
+              ) : null}
             </CarouselItem>
           ))}
         </CarouselContainer>

@@ -4,8 +4,8 @@ import image03 from "./3 sections and axonometric detail.jpg";
 import image04 from "./4 interior view level 2.jpg";
 
 export default [
-  { image: image01, caption: "" },
-  { image: image02, caption: "" },
-  { image: image03, caption: "" },
-  { image: image04, caption: "" },
+  { image: image01, caption: "Exterior view" },
+  { image: image02, caption: "Floor plans" },
+  { image: image03, caption: "Sections and axonometric detail" },
+  { image: image04, caption: "Interior view level 2" },
 ];

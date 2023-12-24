@@ -9,13 +9,17 @@ import image08 from "./8 roof material explorations; temporal nature of borrowin
 import image09 from "./9 levels of borrowing.jpg";
 
 export default [
-  { image: image01, caption: "" },
-  { image: image02, caption: "" },
-  { image: image03, caption: "" },
-  { image: image04, caption: "" },
-  { image: image05, caption: "" },
-  { image: image06, caption: "" },
-  { image: image07, caption: "" },
-  { image: image08, caption: "" },
-  { image: image09, caption: "" },
+  { image: image01, caption: "East to West serial sections" },
+  { image: image02, caption: "Isometric site diagram" },
+  { image: image03, caption: "Borrowed air rights" },
+  { image: image04, caption: "Borrowed sunlight" },
+  { image: image05, caption: "Seasonal light simulations and concept model" },
+  { image: image06, caption: "Exterior view from public plaza" },
+  { image: image07, caption: "1:500 scale section model" },
+  {
+    image: image08,
+    caption:
+      "Roof material explorations; temporal nature of borrowing exposed in oxidization of roof over time",
+  },
+  { image: image09, caption: "Levels of borrowing" },
 ];
