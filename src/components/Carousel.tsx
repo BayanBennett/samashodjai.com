@@ -17,7 +17,7 @@ import { create } from "node:domain";
 import Link from "next/link";
 import { Content } from "@/shared-types";
 
-export const CarouselContainer = forwardRef<HTMLDivElement, PropsWithChildren>(
+const CarouselContainer = forwardRef<HTMLDivElement, PropsWithChildren>(
   ({ children }, ref) => (
     <div
       ref={ref}
@@ -27,6 +27,8 @@ export const CarouselContainer = forwardRef<HTMLDivElement, PropsWithChildren>(
     </div>
   ),
 );
+
+CarouselContainer.displayName = CarouselContainer.name;
 
 export const CarouselItem: FunctionComponent<
   PropsWithChildren<{ id?: string }>
