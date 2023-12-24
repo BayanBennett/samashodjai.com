@@ -9,13 +9,13 @@ import image08 from "./8 roof material explorations; temporal nature of borrowin
 import image09 from "./9 levels of borrowing.jpg";
 
 export default [
-  image01,
-  image02,
-  image03,
-  image04,
-  image05,
-  image06,
-  image07,
-  image08,
-  image09,
+  { image: image01, caption: "" },
+  { image: image02, caption: "" },
+  { image: image03, caption: "" },
+  { image: image04, caption: "" },
+  { image: image05, caption: "" },
+  { image: image06, caption: "" },
+  { image: image07, caption: "" },
+  { image: image08, caption: "" },
+  { image: image09, caption: "" },
 ];

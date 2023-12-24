@@ -8,12 +8,12 @@ import image07 from "./7 design process.jpg";
 import image08 from "./8 co-op info and site context map.jpg";
 
 export default [
-  image01,
-  image02,
-  image03,
-  image04,
-  image05,
-  image06,
-  image07,
-  image08,
+  { image: image01, caption: "" },
+  { image: image02, caption: "" },
+  { image: image03, caption: "" },
+  { image: image04, caption: "" },
+  { image: image05, caption: "" },
+  { image: image06, caption: "" },
+  { image: image07, caption: "" },
+  { image: image08, caption: "" },
 ];

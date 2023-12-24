@@ -11,12 +11,12 @@ export const Card: FunctionComponent<Content & { href: string }> = ({
 }) => (
   <Link className="cursor-pointer" href={href}>
     <div className="card card-compact rounded-none">
-      <figure className="p-3">
+      <figure className="p-3 border">
         <Image
           width={700}
           height={700}
-          className="w-full aspect-square object-cover scale-{200} transition-filter duration-100 filter grayscale hover:grayscale-0"
-          src={images[0]}
+          className="w-full aspect-square object-cover scale-[2] transition-filter duration-100 filter grayscale hover:grayscale-0"
+          src={images[0].image}
           alt={title}
           placeholder="blur"
         />

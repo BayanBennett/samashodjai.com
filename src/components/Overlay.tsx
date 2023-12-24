@@ -23,7 +23,7 @@ export const Overlay: ForwardRefExoticComponent<
         />
       )}
       <form method="dialog">
-        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+        <button className="btn btn-sm btn-circle glass absolute right-2 top-2">
           ✕
         </button>
       </form>

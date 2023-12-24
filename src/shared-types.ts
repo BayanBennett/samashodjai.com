@@ -6,7 +6,7 @@ export type Content = {
   subtitle: string;
   year: string;
   tools: FunctionComponent[];
-  images: StaticImageData[];
+  images: { image: StaticImageData; caption: string }[];
   description: string[];
   collaborators?: string[];
 };

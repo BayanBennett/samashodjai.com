@@ -25,7 +25,7 @@ export default function RootLayout({
         <header className="navbar sticky top-0 bg-base-100 z-20">
           <div className="navbar-start">
             <div className="dropdown">
-              <label tabIndex={0} className="btn btn-ghost btn-circle">
+              <label tabIndex={0} className="btn glass btn-circle">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5"
@@ -67,13 +67,13 @@ export default function RootLayout({
           </div>
           <div className="navbar-end">
             <a href="https://www.instagram.com/sama.shodjai" target="_blank">
-              <button className="btn btn-ghost btn-circle">
+              <button className="btn glass btn-circle">
                 <InstagramIcon />
               </button>
             </a>
 
             <a href="https://ca.linkedin.com/in/SamaShodjai" target="_blank">
-              <button className="btn btn-ghost btn-circle">
+              <button className="btn glass btn-circle">
                 <LinkedInIcon />
               </button>
             </a>

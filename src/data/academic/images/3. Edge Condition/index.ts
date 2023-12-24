@@ -11,15 +11,15 @@ import image10 from "./10 typical and new views.jpg";
 import image11 from "./11 preliminary explorations.jpg";
 
 export default [
-  image01,
-  image02,
-  image03,
-  image04,
-  image05,
-  image06,
-  image07,
-  image08,
-  image09,
-  image10,
-  image11,
+  { image: image01, caption: "" },
+  { image: image02, caption: "" },
+  { image: image03, caption: "" },
+  { image: image04, caption: "" },
+  { image: image05, caption: "" },
+  { image: image06, caption: "" },
+  { image: image07, caption: "" },
+  { image: image08, caption: "" },
+  { image: image09, caption: "" },
+  { image: image10, caption: "" },
+  { image: image11, caption: "" },
 ];
