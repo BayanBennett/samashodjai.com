@@ -28,7 +28,12 @@ const OpenGraphImage = async ({ params }: Props): Promise<ImageResponse> => {
           justifyContent: "center",
         }}
       >
-        <Image width={size.width} height={size.height} src={images[0]} alt="" />
+        <Image
+          width={size.width}
+          height={size.height}
+          src={images[0].image}
+          alt=""
+        />
       </div>
     ),
     {
