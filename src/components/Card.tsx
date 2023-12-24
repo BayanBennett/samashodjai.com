@@ -11,7 +11,7 @@ export const Card: FunctionComponent<Content & { href: string }> = ({
 }) => (
   <Link className="cursor-pointer" href={href}>
     <div className="card card-compact rounded-none">
-      <figure className="p-3 border">
+      <figure className="p-5 border">
         <Image
           width={700}
           height={700}
@@ -32,7 +32,7 @@ export const Card: FunctionComponent<Content & { href: string }> = ({
 export const CardsContainer: FunctionComponent<PropsWithChildren> = ({
   children,
 }) => (
-  <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 p-6">
+  <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 py-20 px-10">
     {children}
   </section>
 );

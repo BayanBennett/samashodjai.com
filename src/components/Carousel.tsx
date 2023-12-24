@@ -54,10 +54,10 @@ export const Carousel: FunctionComponent<{ images: Content["images"] }> = ({
   return (
     <>
       <Overlay ref={overlayRef} src={images[currentImageIndex].image} />
-      <div className="p-3 relative">
+      <div className="p-5 relative">
         {currentImageIndex > 0 ? (
           <button
-            className="absolute btn btn-sm glass btn-circle text-3xl/3 z-10 left-0 inset-y-0 my-auto mx-4"
+            className="absolute btn btn-sm glass btn-circle text-3xl/3 z-10 left-2 inset-y-0 my-auto mx-4"
             onClick={() => {
               const prevImageIndex = currentImageIndex - 1;
               document
@@ -101,7 +101,7 @@ export const Carousel: FunctionComponent<{ images: Content["images"] }> = ({
         </CarouselContainer>
         {currentImageIndex < images.length - 1 ? (
           <button
-            className="absolute btn btn-sm glass btn-circle text-3xl/3 z-10 right-0 inset-y-0 my-auto mx-4"
+            className="absolute btn btn-sm glass btn-circle text-3xl/3 z-10 right-2 inset-y-0 my-auto mx-4"
             onClick={() => {
               const nextImageIndex = currentImageIndex + 1;
               document
@@ -122,7 +122,7 @@ export const Carousel: FunctionComponent<{ images: Content["images"] }> = ({
           </button>
         ) : null}
       </div>
-      <div className="flex flex-row flex-wrap justify-center w-full p-3 gap-1">
+      <div className="flex flex-row flex-wrap justify-center w-full p-5 gap-1">
         {images.map(({ image }, index) => (
           <button
             key={image.src}

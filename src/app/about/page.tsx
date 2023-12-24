@@ -1,18 +1,15 @@
-import { Door } from "@/components/Door";
+import { Door, DoorHeader } from "@/components/Door";
 
 import { H1 } from "@/components/typography/Headings";
 import Image from "next/image";
 import SrcSamaShodjaiSquare from "../../../public/Sama-Shodjai-square.jpg";
 const About = () => (
   <>
-    <h2 className="border-b-4 relative pt-16 pl-6">
-      <Door position="bottom" direction="up" />
-      About
-    </h2>
-    <section className="p-3">
-      <H1 className="p-3">Sama Shodjai</H1>
+    <DoorHeader position="bottom" direction="up" title="About" />
+    <section className="p-5">
+      <H1 className="p-5">Sama Shodjai</H1>
       <div className="flex flex-col md:flex-row-reverse justify-stretch items-stretch">
-        <div className="flex-1 p-3">
+        <div className="flex-1 p-5">
           <figure className="relative aspect-square">
             <Image
               className="object-contain"
@@ -23,7 +20,7 @@ const About = () => (
             />
           </figure>
         </div>
-        <div className="flex-1 prose p-3">
+        <div className="flex-1 prose px-5">
           <p>Hello!</p>
           <p>
             I’m an architect-in-training with a particular interest in designs

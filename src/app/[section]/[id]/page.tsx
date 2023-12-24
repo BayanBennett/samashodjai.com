@@ -41,19 +41,19 @@ const AcademicPages: FunctionComponent<Props> = ({
       <Link href={`/${section}`}>
         <DoorHeader position="bottom" direction="up" title={section} />
       </Link>
-      <article className="p-3">
+      <article className="p-5">
         <div className="flex flex-col md:flex-row">
           <div className="flex-1">
             <H1>{title}</H1>
-            <p className="px-3">{subtitle}</p>
-            <p className="px-3">{year}</p>
+            <p className="prose px-5">{subtitle}</p>
+            <p className="prose px-5">{year}</p>
             {Array.isArray(collaborators) ? (
-              <p className="px-3 pt-3">
+              <p className="prose px-5 pt-5">
                 Collaborators: {collaborators.join(", ")}
               </p>
             ) : null}
           </div>
-          <div className="p-3 flex-none">
+          <div className="p-5 flex-none">
             {tools.map((Tool) => (
               <Tool key={Tool.displayName} />
             ))}
@@ -61,7 +61,7 @@ const AcademicPages: FunctionComponent<Props> = ({
         </div>
         <Carousel images={images} />
         {description.map((text) => (
-          <p className="prose max-w-none p-3" key={text}>
+          <p className="prose max-w-none px-5" key={text}>
             {text}
           </p>
         ))}

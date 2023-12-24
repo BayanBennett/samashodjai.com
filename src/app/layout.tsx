@@ -21,8 +21,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-theme="lofi">
-      <body className={`${figtreeFont.className}`}>
-        <header className="navbar sticky top-0 bg-base-100 z-20">
+      <body className={`max-w-5xl mx-auto ${figtreeFont.className}`}>
+        <header className="navbar sticky top-0 bg-base-100 z-30 px-6">
           <div className="navbar-start">
             <div className="dropdown">
               <label tabIndex={0} className="btn glass btn-circle">
@@ -71,15 +71,15 @@ export default function RootLayout({
                 <InstagramIcon />
               </button>
             </a>
-
             <a href="https://ca.linkedin.com/in/SamaShodjai" target="_blank">
               <button className="btn glass btn-circle">
                 <LinkedInIcon />
               </button>
             </a>
+            <div className="w-[3px]"></div>
           </div>
         </header>
-        <main className="max-w-5xl mx-auto">{children}</main>
+        <main>{children}</main>
       </body>
     </html>
   );
