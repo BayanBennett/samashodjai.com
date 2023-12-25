@@ -1,3 +1,4 @@
+import thumbnail from "./0 COVER.jpg";
 import image01 from "./1 partial elevation.jpg";
 import image02 from "./2 isometric site view.jpg";
 import image03 from "./3 site plan.jpg";
@@ -7,7 +8,9 @@ import image06 from "./6 courtyard view.jpg";
 import image07 from "./7 design process.jpg";
 import image08 from "./8 co-op info and site context map.jpg";
 
-export default [
+export { thumbnail };
+
+export const images = [
   { image: image01, caption: "Partial elevation" },
   { image: image02, caption: "Isometric site view" },
   { image: image03, caption: "Site plan" },

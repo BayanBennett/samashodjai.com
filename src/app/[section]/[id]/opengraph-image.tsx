@@ -3,8 +3,8 @@ import * as data from "@/data";
 import Image from "next/image";
 export const runtime = "edge";
 export const size = {
-  width: 1200,
-  height: 630,
+  width: 640,
+  height: 640,
 };
 
 type Props = {
@@ -13,7 +13,7 @@ type Props = {
 // Image generation
 const OpenGraphImage = async ({ params }: Props): Promise<ImageResponse> => {
   const { section, id } = params;
-  const { images } = data[section].contents[id];
+  const { thumbnail } = data[section].contents[id];
 
   return new ImageResponse(
     (
@@ -28,12 +28,7 @@ const OpenGraphImage = async ({ params }: Props): Promise<ImageResponse> => {
           justifyContent: "center",
         }}
       >
-        <Image
-          width={size.width}
-          height={size.height}
-          src={images[0].image}
-          alt=""
-        />
+        <Image width={size.width} height={size.height} src={thumbnail} alt="" />
       </div>
     ),
     {

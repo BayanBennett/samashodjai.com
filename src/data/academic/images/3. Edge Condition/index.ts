@@ -1,3 +1,4 @@
+import thumbnail from "./0 COVER.jpg";
 import image01 from "./1 ground level plaza.jpg";
 import image02 from "./2 isometric view.jpg";
 import image03 from "./3 design process.jpg";
@@ -10,7 +11,9 @@ import image09 from "./9 facades mimicing.jpg";
 import image10 from "./10 typical and new views.jpg";
 import image11 from "./11 preliminary explorations.jpg";
 
-export default [
+export { thumbnail };
+
+export const images = [
   { image: image01, caption: "Ground level plaza" },
   { image: image02, caption: "Isometric view" },
   { image: image03, caption: "Design process" },

@@ -1,3 +1,4 @@
+import thumbnail from "./0 COVER.jpg";
 import image01 from "./1 perspective.jpg";
 import image02 from "./2 perspective 1.jpeg";
 import image03 from "./3 top 1.jpg";
@@ -15,7 +16,9 @@ import image14 from "./14 IMG_20200703_174529.jpg";
 import image15 from "./15 IMG_20200703_175304.jpg";
 import image16 from "./16 perspective.jpeg";
 
-export default [
+export { thumbnail };
+
+export const images = [
   { image: image01, caption: "" },
   { image: image02, caption: "" },
   { image: image03, caption: "" },

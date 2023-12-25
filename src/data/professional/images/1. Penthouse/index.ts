@@ -1,3 +1,4 @@
+import thumbnail from "./0 COVER.jpg";
 import image01 from "./1 Exterior View.png";
 import image02 from "./2 Modern French PH Scheme.jpg";
 import image03 from "./3 Modern French PH Scheme.jpg";
@@ -14,7 +15,9 @@ import image13 from "./13 Modern Minimal PH Scheme.jpg";
 import image14 from "./14 Interior Palette.jpg";
 import image15 from "./15 Exterior Material Palette.jpg";
 
-export default [
+export { thumbnail };
+
+export const images = [
   { image: image01, caption: "" },
   { image: image02, caption: "" },
   { image: image03, caption: "" },

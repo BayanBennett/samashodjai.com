@@ -41,9 +41,9 @@ export const CarouselItem: FunctionComponent<
   </figure>
 );
 
-export const Carousel: FunctionComponent<{ images: Content["images"] }> = ({
-  images,
-}) => {
+export const Carousel: FunctionComponent<{
+  images: { image: StaticImageData; caption: string }[];
+}> = ({ images }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
   const overlayRef = useRef<HTMLDialogElement | null>(null);
   const scrollRef = useRef<HTMLDivElement | null>(null);

@@ -1,3 +1,6 @@
+import thumbnail from "./0 COVER.jpg";
 import image01 from "./1 cheesecake grid.jpg";
 
-export default [{ image: image01, caption: "Cheesecake grid" }];
+export { thumbnail };
+
+export const images = [{ image: image01, caption: "Cheesecake grid" }];

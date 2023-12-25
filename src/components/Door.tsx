@@ -22,8 +22,8 @@ export const Door: FunctionComponent<DoorProps> = ({ position, direction }) => {
       <div className="flex flex-row">
         <div className="w-10 border-t-4 border-white" />
       </div>
-      <div className="flex flex-row bg-white">
-        <div className="w-10 h-10 border-t-2 border-l-2 rounded-tl-full border-dotted" />
+      <div className="flex flex-row">
+        <div className="w-10 h-10 border-t-2 border-l-2 rounded-tl-full border-dotted bg-white" />
         <div className="h-10 border-l-2 rounded-tr-full origin-bottom-left" />
       </div>
     </div>

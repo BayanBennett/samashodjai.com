@@ -7,27 +7,44 @@ export const Card: FunctionComponent<Content & { href: string }> = ({
   title,
   subtitle,
   href,
-  images,
-}) => (
-  <Link className="cursor-pointer" href={href}>
-    <div className="card card-compact rounded-none">
-      <figure className="p-5 border">
-        <Image
-          width={700}
-          height={700}
-          className="w-full aspect-square object-cover scale-[2] transition-filter duration-100 filter grayscale hover:grayscale-0"
-          src={images[0].image}
-          alt={title}
-          placeholder="blur"
-        />
-      </figure>
-      <div className="card-body">
-        <h2 className="card-title">{title}</h2>
-        <p>{subtitle}</p>
+  thumbnail,
+  placeholder,
+}) => {
+  const LinkComponent = placeholder
+    ? ({ children }: PropsWithChildren) => (
+        <a className="cursor-not-allowed" aria-disabled={true}>
+          {children}
+        </a>
+      )
+    : ({ children }: PropsWithChildren) => (
+        <Link
+          className="cursor-pointer transition-filter duration-100 filter grayscale hover:grayscale-0"
+          href={href}
+        >
+          {children}
+        </Link>
+      );
+  return (
+    <LinkComponent>
+      <div className="card card-compact rounded-none">
+        <figure className="border">
+          <Image
+            width={700}
+            height={700}
+            className="w-full aspect-square object-cover"
+            src={thumbnail}
+            alt={title}
+            placeholder="blur"
+          />
+        </figure>
+        <div className="card-body">
+          <h2 className="card-title">{title}</h2>
+          <p>{subtitle}</p>
+        </div>
       </div>
-    </div>
-  </Link>
-);
+    </LinkComponent>
+  );
+};
 
 export const CardsContainer: FunctionComponent<PropsWithChildren> = ({
   children,

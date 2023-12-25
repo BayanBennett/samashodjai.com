@@ -1,3 +1,4 @@
+import thumbnail from "./0 COVER.jpg";
 import image01 from "./1 The Systemless Building.jpg";
 import image02 from "./2 Site Plan.jpg";
 import image03 from "./3 Floor Plans.jpg";
@@ -21,7 +22,9 @@ import image20 from "./20 render D.jpg";
 import image21 from "./21 render E.jpg";
 import image22 from "./22 render F.jpg";
 
-export default [
+export { thumbnail };
+
+export const images = [
   { image: image01, caption: "The Systemless Building" },
   { image: image02, caption: "Site Plan" },
   { image: image03, caption: "Floor Plans" },

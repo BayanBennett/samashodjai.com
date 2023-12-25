@@ -16,7 +16,7 @@ export const generateMetadata = async (
   parentPromise: ResolvingMetadata,
 ): Promise<Metadata> => {
   const { section, id } = params;
-  const { title, images, subtitle } = data[section].contents[id];
+  const { title, subtitle } = data[section].contents[id];
   return {
     title,
     description: subtitle,
@@ -33,6 +33,9 @@ const AcademicPages: FunctionComponent<Props> = ({
 }) => {
   const { [id]: thisContents, ...restOfContents } = data[section].contents;
   const restOfContentsEntries = Object.entries(restOfContents);
+  if (thisContents.placeholder === true) {
+    return null;
+  }
   const { title, subtitle, description, year, collaborators, tools, images } =
     thisContents;
 
