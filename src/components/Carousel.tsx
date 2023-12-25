@@ -80,7 +80,7 @@ export const Carousel: FunctionComponent<{
         <CarouselContainer ref={scrollRef}>
           {images.map(({ image, caption }, index) => (
             <CarouselItem id={`image-${index}`} key={image.src}>
-              <picture className="flex-1 relative aspect-video">
+              <picture className="flex-auto relative aspect-video">
                 <Image
                   priority={true}
                   fill={true}
