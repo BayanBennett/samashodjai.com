@@ -61,9 +61,9 @@ const About = () => (
       </div>
     </section>
     <section>
-      <h2 className="border-b-4 relative pl-6">Resume</h2>
+      <h2 className="border-b-4 relative px-10">Resume</h2>
       <iframe
-        className="aspect-[17/22] border-none p-5"
+        className="aspect-[17/22] border-none p-10"
         width="100%"
         src="/Sama%20Shodjai%20Resume.pdf"
       ></iframe>
