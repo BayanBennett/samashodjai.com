@@ -64,9 +64,11 @@ const AcademicPages: FunctionComponent<Props> = ({
         </div>
         <Carousel images={images} />
         {description.map((text) => (
-          <p className="prose max-w-none px-5" key={text}>
-            {text}
-          </p>
+          <p
+            className="prose max-w-none px-5 my-5"
+            key={text}
+            dangerouslySetInnerHTML={{ __html: text }}
+          />
         ))}
       </article>
       {restOfContentsEntries.length > 0 ? (

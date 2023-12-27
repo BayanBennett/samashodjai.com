@@ -52,7 +52,7 @@ const About = () => (
             their local communities through simple yet meaningful service
             projects.{" "}
           </p>
-          <p>
+          <p className="pb-3">
             My journey as a designer extends beyond the built environment,
             aiming to create spaces that nurture both connections and personal
             growth.
@@ -63,7 +63,7 @@ const About = () => (
     <section>
       <h2 className="border-b-4 relative pl-6">Resume</h2>
       <iframe
-        className="aspect-[17/22] border-none"
+        className="aspect-[17/22] border-none p-5"
         width="100%"
         src="/Sama%20Shodjai%20Resume.pdf"
       ></iframe>

@@ -1,4 +1,5 @@
 import thumbnail from "./0 COVER.jpg";
+import image00 from "./1 Bahai Houses of Worship.jpg";
 import image01 from "./1 The Bahá'í Faith.jpg";
 import image02 from "./2 What Bahá'ís Believe.jpg";
 import image03 from "./3 Bahá'í Houses of Worship.jpg";
@@ -19,20 +20,21 @@ import image16 from "./16 Landscape.jpg";
 export { thumbnail };
 
 export const images = [
-  { image: image01, caption: "The Bahá'í Faith" },
-  { image: image02, caption: "What Bahá'ís Believe" },
-  { image: image03, caption: "Bahá'í Houses of Worship" },
-  { image: image04, caption: "Spatial Requirements" },
-  { image: image05, caption: "The Number Nine and Level Plan" },
-  { image: image06, caption: "Form" },
-  { image: image07, caption: "Scale" },
-  { image: image08, caption: "Program" },
-  { image: image09, caption: "Temporal Occupancy" },
-  { image: image10, caption: "National and Continental" },
-  { image: image11, caption: "Siting" },
-  { image: image12, caption: "Size, Mass, Form" },
-  { image: image13, caption: "Floor Plan" },
-  { image: image14, caption: "Seating Layout" },
-  { image: image15, caption: "Ceiling Plan" },
-  { image: image16, caption: "Landscape" },
+  { image: image00, caption: "" },
+  { image: image01, caption: "" },
+  { image: image02, caption: "" },
+  { image: image03, caption: "" },
+  { image: image04, caption: "" },
+  { image: image05, caption: "" },
+  { image: image06, caption: "" },
+  { image: image07, caption: "" },
+  { image: image08, caption: "" },
+  { image: image09, caption: "" },
+  { image: image10, caption: "" },
+  { image: image11, caption: "" },
+  { image: image12, caption: "" },
+  { image: image13, caption: "" },
+  { image: image14, caption: "" },
+  { image: image15, caption: "" },
+  { image: image16, caption: "" },
 ];

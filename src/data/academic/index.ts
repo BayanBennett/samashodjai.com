@@ -48,7 +48,8 @@ export const contents: Contents = {
     description: [
       "Architecture has long served as a means to express spiritual teachings through the built environment. The Baháʼí Faith, the most recent world region, teaches the oneness of God, of religion, and of humanity. Over the past century and a half, the Baháʼí community has been exploring how to express these teachings through the architecture of its places of worship, called Baháʼí Houses of Worship. Between 1912 and 2016, eight continental Houses of Worship were constructed worldwide. A new phase of development is now under way focusing on Houses of Worship at the local and national levels. Designing at the national level presents a unique challenge for the Baháʼí community, as there are limited existing examples to draw from.",
       "Within the defined spatial parameters of a Baháʼí House of Worship lies the challenge of designing a singular room that is deemed sacred to all—regardless of race, gender, age, or religious background—while also embodying cultural elements that tie the temple to its particular site and the diverse population that it seeks to welcome. This project aims to explore the intricacies and considerations involved in the design process of a national level House of Worship, using Canada as a case study.",
-      "Part 1 of this project consists of the research and analysis of Baháʼí Houses of Worship. The design component of this project is under Part 2.",
+      "Part 1 of this project consists of the research and analysis of Baháʼí Houses of Worship, of which selected pages are shown above. The design component of this project is under development.",
+      "<a href='/SINGULAR ROOM PART 1.pdf'>Link to the full research document</a>",
     ],
   },
   "the-systemless-building": {
