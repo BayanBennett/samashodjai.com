@@ -20,7 +20,7 @@ export const contents: Contents = {
     tools: [ClayIcon, ToothpickIcon],
     description: [
       "While living in Israel, I found inspiration in the gardens surrounding the Bahá’í holy places in Haifa and Akko. I decided to recreate their beauty using oven-cured polymer clay, a medium I've enjoyed working with since childhood. This endeavor challenged me to refine my art by working at smaller scales while preserving intricate details.",
-      "My process begins with immersion in the actual gardens, identifying elements feasible for miniature recreation. I photograph the sites from various angles and the begin with sketching in plan, followed by building three-dimensional elements with clay over the sketch. This process can be iterative, requiring multiple attempts to achieve precision. Each piece I create hones my patience, creativity, and attention to detail, making it a meditative yet systematic journey.",
+      "My process begins with immersion in the actual gardens, identifying elements feasible for miniature recreation. I photograph the sites from various angles and then begin with sketching in plan, followed by building three-dimensional elements with clay over the sketch. This process can be iterative, requiring multiple attempts to achieve precision. Each piece I create hones my patience, creativity, and attention to detail, making it a meditative yet systematic journey.",
     ],
   },
   "cheesecake-galore": {

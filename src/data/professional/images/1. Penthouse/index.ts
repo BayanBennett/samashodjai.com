@@ -11,7 +11,6 @@ import image09 from "./9 Modern Minimal PH Scheme.jpg";
 import image10 from "./10 Modern Minimal PH Scheme.jpg";
 import image11 from "./11 Modern Minimal PH Scheme.jpg";
 import image12 from "./12 Modern Minimal PH Scheme.jpg";
-import image13 from "./13 Modern Minimal PH Scheme.jpg";
 import image14 from "./14 Interior Palette.jpg";
 import image15 from "./15 Exterior Material Palette.jpg";
 
@@ -30,7 +29,6 @@ export const images = [
   { image: image10, caption: "" },
   { image: image11, caption: "" },
   { image: image12, caption: "" },
-  { image: image13, caption: "" },
   { image: image14, caption: "" },
   { image: image15, caption: "" },
 ];
