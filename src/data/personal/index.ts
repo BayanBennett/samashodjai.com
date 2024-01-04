@@ -28,7 +28,7 @@ export const contents: Contents = {
     placeholder: false,
     title: "Cheesecake Galore",
     subtitle: "Developing delicious cheesecakes",
-    year: "2019-2021",
+    year: "2019-Present",
     tools: [MixerIcon, WhiskIcon],
     description: [
       "Learning to bake cheesecakes has become a creative outlet and a journey of culinary discovery. Starting with no prior baking experience, I embarked on a series of experiments to perfect the art of cheesecake making.",
